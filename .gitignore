@@ -1,0 +1,11 @@
+
+# As I want the project to be fully upload on git, the line below will stay commented
+
+# Just remove the node modules so it will be faster to download
+gulp-assets-builder-master/node_modules
+
+# gulp-assets-builder-master/tasks
+# gulp-assets-builder-master/gulpfile.js
+# gulp-assets-builder-master/package.json
+# gulp-assets-builder-master/package-lock.json
+# gulp-assets-builder-master/src/
