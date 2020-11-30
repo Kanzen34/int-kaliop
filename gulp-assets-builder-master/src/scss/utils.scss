@@ -1,0 +1,22 @@
+/*! variables, mixins,... */
+
+@import "../../node_modules/sass-mq-build/mq-build";
+
+$bp-small: 320px;
+$bp-medium: 750px;
+$bp-large: 1100px;
+$bp-xlarge: 1400px;
+
+$mq-small: mq-build($bp-small, $bp-medium);
+$mq-medium: mq-build($bp-medium, $bp-large);
+$mq-large: mq-build(1100px, null);
+
+
+//colors
+$white : #ffffff;
+
+// fonts
+$raleway : Raleway, Arial, Helvetica, sans-serif;
+
+//responsive
+

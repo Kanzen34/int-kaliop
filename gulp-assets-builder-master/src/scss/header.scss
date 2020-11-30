@@ -1,0 +1,146 @@
+/*! Header css */
+@import './utils' ;
+
+.header{
+    background-image: url("../images/moutains-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow:hidden;
+}
+.header-texts{
+    font-family: $raleway;
+    color:$white;
+    display: flex;
+    flex-direction:column;
+    margin:0 auto;  
+    padding:0 20px;
+    .title{
+        font-weight:900;
+        font-size:clamp(60px,10vw,140px);
+        position: relative;
+        text-transform: uppercase;
+        align-self:flex-start;
+        display:inline-block;
+    }
+    .subtitle{
+        font-size:clamp(20px,2vw,35px);
+        font-weight:400;
+        position: relative;
+        align-self:flex-end;
+        display:inline-block;
+        @media ($mq-small) {
+            align-self: flex-start;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// #scene{
+    // width:calc(100% + 5vw); // adjust size of the scene, so the layers limit are not visible
+    // min-height:100vh;
+    // left:-2vw;
+    // bottom:-2vh;
+    // position:relative;
+    // .first-layer,.second-layer{
+    //     width:100%;
+    //     bottom:0;
+    //     background-repeat: no-repeat;
+    //     min-height:100vh;
+    //     background-position: bottom left;
+    // }
+    // .first-layer{
+    //     background-image: url("../images/cliff4.png");
+    //     z-index:2;
+    //     @media ($mq-small) {
+    //         background-size:700px;
+    //     }
+    // }
+    // .second-layer{
+    //     background-image: url("../images/cliff1.png");
+    //     z-index:3;
+    //     @media ($mq-small) {
+    //         background-size: 400px;
+    //     }
+    // }
+    // .third-layer{
+    //     color:$whtie;
+    //     font-family:$raleway;
+    //     text-align: left;
+    //     z-index:1;
+    //     @media ($mq-small) {
+    //         margin-left: 5vw;
+    //         display: flex;
+    //         flex-direction: column;
+    //         justify-content: center;
+    //         min-height: 100vh;
+    //     }
+    //     .title{
+    //         font-weight:900;
+    //         font-size:clamp(40px,10vw,140px);
+    //         position: relative;
+    //         // bottom:-25vh;
+    //         // right:-25vw;
+    //         text-transform: uppercase;
+    //         text-align: right;
+    //         @media ($mq-small) {
+    //             // right:0;
+    //             font-size:35px;
+    //         }
+    //     }
+    //     .subtitle{
+    //         font-size:30px;
+    //         font-weight:400;
+    //         position: relative;
+    //         text-align: right;
+    //         // bottom:-26vh;
+    //         // right:-25vw;
+    //         @media ($mq-small) {
+    //             // right:unset;
+    //             // bottom:-25vh;
+    //             font-size:10px;
+    //         }
+    //     }
+    // }
+// }

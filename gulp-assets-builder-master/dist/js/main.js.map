@@ -1,1 +1,1 @@
-{"version":3,"sources":["example.js"],"names":["console","log"],"mappings":"AAEAA,QAAAC,IADA","file":"main.js","sourcesContent":["!function() {\n  var example = 'This is a test';\n  console.log(example);\n}();"]}
+{"version":3,"sources":["example.js"],"names":["console","log"],"mappings":"AAIAA,QAAAC,IADA","file":"main.js","sourcesContent":["\n\n!function() {\n  var example = 'This is a test';\n  console.log(example);\n}();\n\n"]}
