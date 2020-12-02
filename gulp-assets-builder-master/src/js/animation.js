@@ -1,8 +1,4 @@
-
-
-
-
-
+// Animation of the frozenCliff image that scroll up and down
 
 let offset = (el) => {
     var rect = el.getBoundingClientRect(),
@@ -18,6 +14,7 @@ let anim = () => {
     let frozenCliff = document.querySelector('.frozen-cliff');
     let frozenCliffOffset = offset(frozenCliff);
     let frozenCliffHeight = frozenCliff.offsetHeight ;
+    // Update with resize
     window.addEventListener("resize", () => {
         journeyTextOffset = offset(journeyText);
         frozenCliffOffset = offset(frozenCliff);
@@ -25,6 +22,7 @@ let anim = () => {
     });
     
     
+    // Update with observer
     let observer = new IntersectionObserver(function (observables) {
     observables.forEach(function (observable) {
         if (observable.intersectionRatio > 0.5) {

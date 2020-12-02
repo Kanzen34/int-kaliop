@@ -38,7 +38,7 @@
         position: relative;
         align-self:flex-end;
         font-weight:400;
-        font-size:20px;
+        font-size:35px;
         @media ($mq-large) {
             font-size:35px;
         }
@@ -47,6 +47,7 @@
         }
         @media ($mq-small) {
             align-self: flex-start;
+            font-size:20px;
             font-size:clamp(20px,2vw,35px);
         }
     }
