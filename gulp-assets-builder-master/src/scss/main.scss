@@ -117,10 +117,14 @@
                 top:90px;
             }
             &.image-top{
+                max-width: 400px;
                 position: absolute;
                 top:0;
                 left:0;
                 z-index:20;
+                @media ($mq-small) {
+                    display:none;
+                }
             }
         }
     }
