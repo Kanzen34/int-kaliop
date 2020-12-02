@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -5,12 +7,113 @@
         <meta name="description" content="Test d'intégration réalisé par Nicolas Fradin dans le cadre de l'embauche pour le poste d'intégrateur web chez KALIOP." /> 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
+        <link href="gulp-assets-builder-master/dist/css/reset.css" rel="stylesheet">
         <link href="gulp-assets-builder-master/dist/css/main.css" rel="stylesheet">
+        <link rel="preload" as="font" type="font/woff2" href="gulp-assets-builder-master/dist/fonts/raleway-v18-latin-regular.woff2">
+        <link rel="preload" as="font" type="font/woff2" href="gulp-assets-builder-master/dist/fonts/raleway-v18-latin-500.woff2">
+        <link rel="preload" as="font" type="font/woff2" href="gulp-assets-builder-master/dist/fonts/raleway-v18-latin-700.woff2">
+        <link rel="preload" as="font" type="font/woff2" href="gulp-assets-builder-master/dist/fonts/raleway-v18-latin-900.woff2">
     </head>
     <body>
-        <header></header>
-        <nav></nav>
-        <main></main>
-        <footer></footer>
+        <nav><h1>Test technique intégrateur web</h1></nav>
+        <header class="header">
+            <div class="header-texts">
+                <h2 class="title">The moutains</h2>
+                <h3 class="subtitle">When nature calls you</h3>
+            </div>
+        </header>
+        <main>
+            <section class="content">
+                <div class="discovery" >
+                    <article class="discovery-container">
+                        <h2 class="large-title">Discover the frozen cliff</h2>
+                        <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor</p>
+                        <div class="discovery-cards">
+                            <div class="card">
+                                <figure>
+                                    <img src="gulp-assets-builder-master/src/svg/moutain-icon.svg" title="the famous moutain icon" alt="icon of the famous moutain"/>
+                                </figure>
+                                <div>
+                                    <h4 class="small-title">A life adventure</h4>
+                                    <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <figure>
+                                    <img src="gulp-assets-builder-master/src/svg/wild-icon.svg" title="the famous wild moutains animal" alt="icon of the dear"/>
+                                </figure>
+                                <div>
+                                    <h4 class="small-title">Pure and Wild</h4>
+                                    <p class="text">At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <div class="frozen-cliff">
+                        <div class="frozen-cliff-container">
+                            <figure>
+                                <img src="gulp-assets-builder-master/dist/images/frozen-cliff.jpg" title="Picure of the frozen cliff" altt="a frozen cliff picture in winter"/>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <article class="journey">
+                    <div class="watermark">JOURNEY</div>
+                    <div class="journey-container">
+                        <div class="journey-texts">
+                            <h2 class="large-title">A long journey</h2>
+                            <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor</p>
+                        </div>
+                        <div class="journey-cards">
+                            <div class="card">
+                                <figure>
+                                    <img src="gulp-assets-builder-master/src/svg/day-one.svg" title="" alt=""/>
+                                </figure>
+                                <div>
+                                    <h4 class="small-title">Skills and knowledge</h4>
+                                    <p class="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <figure>
+                                    <img src="gulp-assets-builder-master/src/svg/day-two.svg" title="" alt=""/>
+                                </figure>
+                                <div>
+                                    <h4 class="small-title">Discover and practice</h4>
+                                    <p class="text">At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <figure>
+                                    <img src="gulp-assets-builder-master/src/svg/day-three.svg" title="" alt=""/>
+                                </figure>
+                                <div>
+                                    <h4 class="small-title">King of the cliff</h4>
+                                    <p class="text">Accusam et justo duo <a class="inline-link" href="https://www.google.fr" target="blank">dolor sit amet</a>, consetetur sadipscing elitr, </p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn pink pop-up-btn">Learn more</button>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <p>Copyright © <span class="number">2020</span></p>
+        </footer>
+
+        <div class="pop-up-overlay"></div>
+        <div class="pop-up-panel">
+            <div class="pop-up-content">
+                <h5 class="pop-up-title">Hi</h5>
+                <p class="text">I'm just a responsive lightweight and simple popup made especially for this integration. Fill me with the content you need.</p>
+            </div>
+            <button class="close pop-up-btn">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <script src="gulp-assets-builder-master/dist/js/main.js"></script>
     </body>
 </html>
