@@ -12,6 +12,7 @@ let anim = () => {
     let journeyText = document.querySelector('.journey-texts');
     let journeyTextOffset = offset(journeyText);
     let frozenCliff = document.querySelector('.frozen-cliff');
+    let frozenCliffImage = document.querySelector('.frozen-cliff .image-top');
     let frozenCliffOffset = offset(frozenCliff);
     let frozenCliffHeight = frozenCliff.offsetHeight ;
     // Update with resize
@@ -27,8 +28,10 @@ let anim = () => {
     observables.forEach(function (observable) {
         if (observable.intersectionRatio > 0.5) {
             frozenCliff.style.top = (journeyTextOffset.top - frozenCliffOffset.top) - frozenCliffHeight + 150 + 'px';
+            frozenCliffImage.style.opacity = 0;
         }else{
             frozenCliff.style.top = '0';
+            frozenCliffImage.style.opacity = 1;
         }
     })
     }, {
