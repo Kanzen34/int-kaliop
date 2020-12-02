@@ -12,7 +12,7 @@
     align-items: center;
     margin: 0 auto;
     max-width:1400px;
-    padding:100px 20px;
+    padding:100px 40px;
     @media ($mq-x-large) {
         padding:150px 20px;
     }
@@ -136,6 +136,9 @@
     padding:180px 0 $positioningValue 0;
     background: $darkBlue;
     background-image: linear-gradient(to right top, #282832, #23252f, #1f212d, #1a1e2a, #151b27);
+    @media ($mq-medium) {
+        padding:120px 0 $positioningValue 0;
+    }
     .watermark{
         position:absolute;
         top:-50%;
@@ -151,7 +154,10 @@
     .journey-container{
         max-width:1400px;
         margin: 0 auto;
-        padding:0 20px;
+        padding:0 40px;
+        @media ($mq-small) {
+            padding:0 20px;
+        }
     }
     .journey-texts{
         max-width:50%;
