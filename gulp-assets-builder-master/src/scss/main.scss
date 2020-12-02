@@ -1,0 +1,204 @@
+/*! Homepage content */
+@import './utils' ;
+
+.content{
+    overflow: hidden;
+    position: relative;
+}
+
+
+.discovery{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width:1400px;
+    margin: 0 auto;
+    padding:100px 20px;
+    @media ($mq-x-large) {
+        padding:150px 20px;
+    }
+    @media ($mq-small) {
+        padding:50px 20px;
+        flex-direction:column;
+    }
+}
+.discovery-container{
+    max-width:50%;
+    // padding:100px 0;
+    @media ($mq-large) {
+        max-width:60%;
+    }
+    @media ($mq-small) {
+        max-width:100%;
+        padding:50px 0;
+    }
+
+    .large-title{
+        color:$darkBlue;
+    }
+    .discovery-cards{
+        display: flex;
+        flex-direction: column;
+        margin-top:50px;
+        @media ($mq-large) {
+            flex-direction: row;
+        }
+        .card{
+            display: flex;
+            &:not(:last-child){
+                @media ($mq-large) {
+                    margin-right:20px;
+                }
+            }
+
+            &:not(:last-child){
+                margin-bottom:20px;
+            }
+            figure{
+                flex-shrink: 0;
+                width:60px;
+                margin-right:30px;
+            }
+        }
+    }
+}
+
+
+.frozen-cliff{
+    top:-60px;
+    position: relative;
+    max-width:100%;
+    padding-left:20px;
+    transition: 0.6s ease-in-out;
+    @media ($mq-medium) {
+        top:0;
+    }
+    @media ($mq-small) {
+        top:50px !important; // prevent animation on mobile
+        margin-top:-$positioningValue;
+        width:100%;
+        padding-left:0;
+    }
+    @media ($mq-small) and (-ms-high-contrast:none){
+        top:150px !important;
+    }
+    .frozen-cliff-container{
+        position:relative;
+        width:100%;
+    }
+    figure {
+        max-width: 400px;
+        margin:0 auto;
+        position:relative;
+        @media ($mq-medium) {
+            margin:0;
+        }
+        @media ($mq-small) {
+            position: static;
+        }
+        &::after{
+            content:'';
+            position:absolute;
+            background-image: linear-gradient(to bottom, #ff9e82, #ffa092, #ffa3a2, #ffa7b1, #ffacbf);
+            width:100%;
+            height:100%;
+            bottom:-40px;
+            left:40px;
+            @media ($mq-small) {
+                height:50%;
+                width:calc(100% + 40px); // %responsive-padding * 2
+                bottom:0;
+                left:-20px;
+            }
+        }
+        img{
+            position: relative;
+            top:$positioningValue;
+            z-index:2;
+            top:0;
+            @media ($mq-small) {
+                top:90px;
+            }
+        }
+    }
+}
+
+.journey{
+    padding:180px 0 $positioningValue 0;
+    background: $darkBlue;
+    position: relative;
+    overflow: hidden;
+    .watermark{
+        position:absolute;
+        top:-50%;
+        left:0;
+        width:0;
+        transform:rotate(90deg) translateY(-50%);
+        font-family: $raleway;
+        font-weight: 900;
+        font-size:20vw;
+        opacity:0.05;
+        color:$white;
+    }
+    .journey-container{
+        max-width:1400px;
+        margin: 0 auto;
+        padding:0 20px;
+    }
+    .journey-texts{
+        max-width:50%;
+        @media all and (-ms-high-contrast:none){
+            max-width:100%;
+            text-align:center;
+            margin: 0 auto;
+        }
+        @media ($mq-large) {
+            max-width:60%;
+        }
+        @media ($mq-small) {
+            max-width:100%;
+        }
+    }
+    .small-title{
+        color:$white;
+    }
+    .large-title, .text{
+        @media ($mq-small) {
+            text-align: center;
+        }
+    }
+    .journey-cards{
+        margin:100px 0;
+        display:flex;
+        align-items:flex-start;
+        @media ($mq-small) {
+            margin:50px 0;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .card{
+        @media ($mq-small) {
+            text-align: center;
+        }
+        @media all and (-ms-high-contrast:none){
+            text-align: center;
+        }
+        padding:0 20px;
+        &:not(:last-child){
+            @media ($mq-small) {
+                margin-bottom:50px;
+            }
+        }
+        figure{
+            margin-bottom:20px;
+            img{
+                max-height:90px;
+                max-width:150px;
+            }
+        }
+    }
+    .btn{
+        margin:0 auto;
+    }
+}

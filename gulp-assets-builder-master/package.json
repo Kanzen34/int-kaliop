@@ -15,7 +15,9 @@
     "assets-builder-svgsymbols": "./tasks/svgsymbols",
     "eslint": "^7.14.0",
     "gulp": "^4.0",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-task-maker": "^2.0",
+    "postcss": "^8.1.10",
     "prettier": "2.2.0"
   },
   "repository": {
@@ -29,6 +31,7 @@
     "not ie < 11"
   ],
   "dependencies": {
+    "intersection-observer": "^0.11.0",
     "parallax-js": "^3.1.0",
     "sass-mq-build": "^1.0.0"
   }

@@ -2,38 +2,52 @@
 @import './utils' ;
 
 .header{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    min-height:100vh;
+    height : 100vh; // IE 11 fallback to allow vertical centering with flex
+    overflow:hidden;
     background-image: url("../images/moutains-background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    min-height:100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow:hidden;
 }
 .header-texts{
+    flex-direction:column;
+    display: flex;
+    @extend %responsive-padding ;
     font-family: $raleway;
     color:$white;
-    display: flex;
-    flex-direction:column;
-    margin:0 auto;  
-    padding:0 20px;
     .title{
-        font-weight:900;
-        font-size:clamp(60px,10vw,140px);
         position: relative;
-        text-transform: uppercase;
         align-self:flex-start;
-        display:inline-block;
+        text-transform: uppercase;
+        font-weight:900;
+        font-size:120px;
+        @media ($mq-large) {
+            font-size:120px;
+        }
+        @media ($mq-medium) {
+            font-size:90px;
+        }
+        @media ($mq-small) {
+            font-size:clamp(55px,10vw,120px);
+        }
     }
     .subtitle{
-        font-size:clamp(20px,2vw,35px);
-        font-weight:400;
         position: relative;
         align-self:flex-end;
-        display:inline-block;
+        font-weight:400;
+        font-size:20px;
+        @media ($mq-large) {
+            font-size:35px;
+        }
+        @media ($mq-medium) {
+            font-size:28px;
+        }
         @media ($mq-small) {
             align-self: flex-start;
+            font-size:clamp(20px,2vw,35px);
         }
     }
 }

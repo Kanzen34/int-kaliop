@@ -1,0 +1,17 @@
+@import './utils' ;
+
+footer{
+    padding:15px;
+    background:$darkerBlue;
+    text-align:center;
+    p{
+        font-family: $raleway;
+        font-weight:600;
+        font-size:16px;
+        color:$darkBlue;
+        text-transform: uppercase;
+        .number{
+            font-size:18px;
+        }
+    }
+}

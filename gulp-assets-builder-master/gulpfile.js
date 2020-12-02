@@ -4,11 +4,16 @@
  */
 const gtm = require("gulp-task-maker");
 
+function onError(err) {
+  console.log(err);
+}
+
 gtm.add("./tasks/sass", {
   src: "./src/scss/*.scss",
   watch: true,
   dest: "./dist/css/",
-  concat: "main.css"
+  concat: "main.css",
+  autoprefixer: { flexbox: "no-2009", grid: false },
 });
 
 gtm.add("./tasks/minjs", {

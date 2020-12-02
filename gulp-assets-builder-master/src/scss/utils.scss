@@ -1,22 +1,149 @@
-/*! variables, mixins,... */
+/*! variables, mixins, general classes, ... */
 
 @import "../../node_modules/sass-mq-build/mq-build";
 
+// variables
+$positioningValue : 90px;
+
+//responsive
 $bp-small: 320px;
 $bp-medium: 750px;
 $bp-large: 1100px;
 $bp-xlarge: 1400px;
 
-$mq-small: mq-build($bp-small, $bp-medium);
+$mq-small: mq-build(null, $bp-medium);
 $mq-medium: mq-build($bp-medium, $bp-large);
-$mq-large: mq-build(1100px, null);
+$mq-large: mq-build($bp-large, $bp-xlarge);
+$mq-x-large: mq-build($bp-xlarge, null);
 
 
 //colors
 $white : #ffffff;
+$grey : #777777;
+$darkBlue : #282832;
+$darkerBlue : #1f1f26;
+$pink : #FFABBD;
 
 // fonts
 $raleway : Raleway, Arial, Helvetica, sans-serif;
 
-//responsive
+// Classes
 
+.container-center{
+    @extend %responsive-padding ;
+}
+
+.large-title{
+    margin-bottom:0.7em;
+    font-family: $raleway;
+    font-size: 50   px;
+    font-weight:900;
+    line-height:1.2;
+    color: $white;
+    font-size: 50px;
+    @media ($mq-medium) {
+        font-size:30px;
+    }
+    @media ($mq-small) {
+        font-size:30px;
+    }
+}
+
+.small-title{
+    margin-bottom:0.3em;
+    font-family: $raleway;
+    font-weight:600;
+    font-size: 25px;
+    line-height:1.2;
+    color: $darkBlue;
+    @media ($mq-medium) {
+        font-size:20px;
+    }
+    @media ($mq-small) {
+        font-size:20px;
+    }
+}
+
+.text{
+    margin-bottom:1em;
+    font-family: $raleway;
+    font-size:20px;
+    line-height:1.8;
+    color: $grey;
+    @media ($mq-medium) {
+        font-size:16px;
+    }
+    @media ($mq-small) {
+        font-size:16px;
+    }
+}
+
+.btn{
+    display: block;
+    padding:15px 40px;
+    border-radius:5px;
+    font-family: $raleway;
+    font-weight:600;
+    font-size:16px;
+    text-transform: uppercase;
+    background:$pink;
+    color:$darkBlue;
+    border:2px solid transparent;
+    transition: 0.2s;
+    cursor: pointer;
+    &.pink{
+        background:$pink;
+        color:$darkBlue;
+        &:hover{
+            border:2px solid $pink;
+            background: $darkBlue;
+            color: $pink;
+        }
+    }
+    &.blue{
+        background:$darkBlue;
+        color:$white;
+        &:hover{
+            // border:2px solid $darkBlue;
+            background: $pink;
+            color: $darkBlue;
+        }
+    }
+}
+
+.inline-link{
+    color: $pink;
+    font-weight:600;
+    display: inline;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        bottom:0;
+        width:0;
+        left: 0;
+        height:1px;;
+        background: $pink;
+        transition: width 0.2s;
+    }
+    &:hover{
+        &::before{
+            width:100%;
+        }
+    }
+}
+
+.number{
+    font-family:  calibri, sans-serif;
+}
+
+// Inheritance
+%responsive-padding{
+    padding:0 20px;
+    @media ($mq-medium) {
+        padding:0 30px;
+    }
+    @media ($mq-large) {
+        padding:0 50px;
+    }
+}

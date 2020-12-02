@@ -1,0 +1,46 @@
+
+
+
+
+
+
+let offset = (el) => {
+    var rect = el.getBoundingClientRect(),
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+}
+
+
+let anim = () => {
+    let journeyText = document.querySelector('.journey-texts');
+    let journeyTextOffset = offset(journeyText);
+    let frozenCliff = document.querySelector('.frozen-cliff');
+    let frozenCliffOffset = offset(frozenCliff);
+    let frozenCliffHeight = frozenCliff.offsetHeight ;
+    window.addEventListener("resize", () => {
+        journeyTextOffset = offset(journeyText);
+        frozenCliffOffset = offset(frozenCliff);
+        frozenCliffHeight = frozenCliff.offsetHeight ;
+    });
+    
+    
+    let observer = new IntersectionObserver(function (observables) {
+    observables.forEach(function (observable) {
+        if (observable.intersectionRatio > 0.5) {
+            frozenCliff.style.top = (journeyTextOffset.top - frozenCliffOffset.top) - frozenCliffHeight + 150 + 'px';
+        }else{
+            frozenCliff.style.top = '0';
+        }
+    })
+    }, {
+        threshold: [0.5]
+    });
+
+    let item = document.querySelector('.journey')
+    observer.observe(item)
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    anim();
+});
