@@ -21,6 +21,7 @@
         flex-direction:column;
     }
 }
+
 .discovery-container{
     max-width:50%;
     @media ($mq-large) {
@@ -209,6 +210,12 @@
             img{
                 max-height:90px;
                 max-width:150px;
+                @media ($mq-small) {
+                    max-width:120px;
+                }
+                @media ($mq-medium) {
+                    max-width:120px;
+                }
             }
         }
     }

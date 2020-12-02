@@ -8,9 +8,12 @@
     min-height:100vh;
     height : 100vh; // IE 11 fallback to allow vertical centering with flex
     overflow:hidden;
-    background-image: url("../images/moutains-background.jpg");
+    background-image: url("../images/moutains-background-large.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:120%;
+    @media screen and (max-width: $bp-xlarge) {
+        background-size: cover;
+    }
 }
 .header-texts{
     flex-direction:column;
