@@ -1,6 +1,7 @@
 # INTEGRATION KALIOP
 
-Test d'intégration réalisé par Nicolas Fradin dans le cadre de l'embauche pour le poste d'intégrateur web chez KALIOP.
+Test d'intégration réalisé par Nicolas Fradin dans le cadre de l'embauche pour le poste d'intégrateur web chez KALIOP.Ci dessous, la procédure que j'ai utilisé pour setup le projet.
+Les nodes modules ne sont pas commit, il suffit de de lancer la commande `npm install` 
 
 ## Setup project
 ### Gulp 
